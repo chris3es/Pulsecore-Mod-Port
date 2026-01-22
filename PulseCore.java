@@ -33,3 +33,8 @@ public class PulseCore implements ModInitializer {
         return Identifier.of(MODID, name);
     }
 }
+
+ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+    entries.add(DENSE_SHARD);
+    entries.add(DENSE_BLOCK);
+});
